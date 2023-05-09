@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Work+Sans&display=swap");
+:root {
+  --bcg-color: #efe8e5;
+  --side-color: #fff;
+  --common-text_font: ` "Poppins", sans-serif`;
+  --button-text_font: ` "Work Sans", sans-serif`;
+  --common-text_color: #1e284a;
+  --header-text_size: 1.2rem;
+}
+
+@mixin Poppins600 {
+  font-family: var(--common-text_font);
+  font-weight: 600;
+}
+
+#app {
+  font-family: var(--common-text_font);
+  color: var(--common-text_color);
+  margin-top: 60px;
+}
+body {
+  background-color: var(--bcg-color);
+  margin: 0;
+  min-height: 200vh;
+}
