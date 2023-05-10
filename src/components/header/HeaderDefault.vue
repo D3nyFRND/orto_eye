@@ -47,7 +47,7 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
-        class="hamburger"
+        class="hamburger phone"
         :class="{ sidebar: active === false }"
         viewBox="0 0 16 16"
         v-on:click="menu"
