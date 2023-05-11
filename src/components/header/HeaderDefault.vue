@@ -58,7 +58,6 @@
       </svg>
     </div>
   </nav>
-  <section style="height: 200vh"></section>
 </template>
 <script>
 export default {

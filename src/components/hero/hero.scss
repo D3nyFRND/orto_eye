@@ -1,0 +1,159 @@
+@mixin bcg-img($size, $url){
+    background-size: $size;
+    background-image: $url;
+    background-repeat: no-repeat;
+}
+
+.bi{
+    height: var(--h2-text_size);
+}
+
+section{
+    display: flex;
+    min-height: 100svh;
+    text-align: left;
+    .left{
+        flex: 5;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        
+        .leftText{
+            margin-bottom: 2rem;
+
+            h2{
+                font-size: var(--h2-text_size);
+                font-weight: bold;
+            }
+            h1{
+                width: min-content;
+                font-size: var(--heroHeader-text_size);
+                font-weight: 700;
+            }
+        }
+
+        button{
+            width: fit-content;
+            border: solid var(--common-text_color) 2px;
+            font-family: var(--button-text_size);
+            border-radius: 2rem;
+            padding: 1rem;
+            transition: 0.4s;
+            display: flex;
+            align-items: center;
+
+            &:hover{
+                color: var(--bcg-color);
+                background-color: var(--common-text_color);
+                
+                .bi-caret-right-fill{
+                    fill: var(--bcg-color);
+                }
+            }
+
+            .bi-caret-right-fill{
+                height: var(--common-text_size);
+                fill: var(--common-text_color);
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    .right{
+        flex: 11;
+        display: flex;
+        @include bcg-img(contain, url("../../assets/hero/heroMain_desktop.webp"));
+        
+
+        .empty{
+            flex: 1;
+        }
+
+        .boxes{
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 10vh auto;
+            .box{
+                display: block;
+                width: 200px;
+                height: 200px;
+                border-radius: 2rem;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0.4rem;
+                padding: 1rem;
+            }
+
+            .boxesTop{
+                display: flex;
+                flex-wrap: wrap;
+                .boxLeft{
+                    @include bcg-img(cover, url("../../assets//hero/heroSide.webp"))
+                }
+                .boxRight{
+                    background-color: var(--side-color);
+                    .bi-eye{
+                        margin-right: auto;
+                        fill: var(--common-text_color);
+                    }
+                }
+            }
+
+            .boxesBottom{
+                display: flex;
+                .boxLeft{
+                    display: flex;
+                    justify-content: center; 
+                    align-items: center;
+                    background-position: center;
+                    aspect-ratio: 1/1;
+                    position: relative;
+                    bottom: 115px;
+                    left: 75px;
+                    span{
+                        padding: 2rem;
+                        border-radius: 100%;
+                        background-color: var(--common-text_color);
+                        position: relative;
+                        left: 20%;
+                        top: 3%;
+                        transition: 0.4s;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: var(--side-color);
+                            .bi{
+                                fill: var(--common-text_color);
+                            }
+                        }
+                    }
+                    span::before{
+                        content: url("../../assets/hero/modalViewer/Elipsa_2.svg");
+                        position: absolute;
+                        bottom: -65%;
+                        left: -50%;
+                        scale: 0.9;
+                    }
+                    .bi{
+                        fill: var(--bcg-color);
+                    }
+                }
+                .boxRight{
+                    background-color: var(--common-text_color);
+                    .bi{
+                        margin-right: auto;
+                        fill: var(--side-color);
+                    }
+                    p{
+                        color: var(--side-color);
+                    }
+                }
+            }
+        }
+    }
+}

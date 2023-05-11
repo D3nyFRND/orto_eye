@@ -5,14 +5,11 @@
   --common-text_font: ` "Poppins", sans-serif`;
   --button-text_font: ` "Work Sans", sans-serif`;
   --common-text_color: #1e284a;
+  --common-text_size: 1rem;
   --header-text_size: 1.5rem;
+  --heroHeader-text_size: 4rem;
+  --h2-text_size: 2rem;
 }
-
-@mixin Poppins600 {
-  font-family: var(--common-text_font);
-  font-weight: 600;
-}
-
 #app {
   font-family: var(--common-text_font);
   color: var(--common-text_color);
@@ -21,5 +18,4 @@
 body {
   background-color: var(--bcg-color);
   margin: 0;
-  min-height: 200vh;
 }
