@@ -1,12 +1,45 @@
 <template>
   <section>
+    <div
+      v-if="modalToogle_value_knowMore"
+      class="knowMore"
+      :class="{ modal: modalToogle_value_knowMore == true }"
+      v-on:click.self="modalToogle_knowMore"
+    >
+      <div class="knowMore_inside">
+        <h1>Lorem, ipsum.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+          aperiam.
+        </p>
+      </div>
+    </div>
+    <div
+      v-if="modalToogle_value_playButton"
+      class="playButton"
+      :class="{ modal: modalToogle_value_playButton == true }"
+      v-on:click.self="modalToogle_playButton"
+    >
+      <div class="playButton_inside">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
     <div class="left">
       <div>
         <div class="leftText">
           <h2>Specjalistyczny</h2>
           <h1>Gabinet Ortoptyczny w Olsztynie</h1>
         </div>
-        <button>
+        <button v-on:click="modalToogle_knowMore">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="bi-caret-right-fill"
@@ -44,7 +77,7 @@
         <div class="boxesBottom">
           <div class="boxLeft box">
             <div>
-              <span>
+              <span v-on:click="modalToogle_playButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="bi bi-play-fill"
@@ -78,7 +111,32 @@
   </section>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      modalToogle_value_knowMore: false,
+      modalToogle_value_playButton: false,
+    };
+  },
+  methods: {
+    modalToogle_knowMore() {
+      this.modalToogle_value_knowMore = !this.modalToogle_value_knowMore;
+      if (this.modalToogle_value_knowMore == true) {
+        document.querySelector("body").style.overflow = "hidden";
+      } else {
+        document.querySelector("body").style.overflow = "scroll";
+      }
+    },
+    modalToogle_playButton() {
+      this.modalToogle_value_playButton = !this.modalToogle_value_playButton;
+      if (this.modalToogle_value_playButton == true) {
+        document.querySelector("body").style.overflow = "hidden";
+      } else {
+        document.querySelector("body").style.overflow = "scroll";
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss" src="./hero.scss" scoped></style>

@@ -4,6 +4,50 @@
     background-repeat: no-repeat;
 }
 
+
+.playButton{
+        
+        display: none;
+
+        iframe{
+            display: none;
+        }
+    }
+
+.knowMore{
+    display: none;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bcg);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+    .knowMore_inside{
+        background-color: var(--side-color);
+        padding: 1rem;
+        border-radius: 1rem;
+
+    }
+    &.playButton{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+
+        iframe{
+            display: block;
+        }
+    }
+
+}
+
 .bi{
     height: var(--h2-text_size);
 }
