@@ -2,13 +2,16 @@
 :root {
   --bcg-color: #efe8e5;
   --side-color: #fff;
+  --common-text_color: #1e284a;
+
   --common-text_font: ` "Poppins", sans-serif`;
   --button-text_font: ` "Work Sans", sans-serif`;
-  --common-text_color: #1e284a;
+
   --common-text_size: 1rem;
   --header-text_size: 1.5rem;
   --heroHeader-text_size: 4rem;
   --h2-text_size: 2rem;
+
 }
 #app {
   font-family: var(--common-text_font);
@@ -17,5 +20,9 @@
 }
 body {
   background-color: var(--bcg-color);
+  margin: 0;
+}
+
+#app{
   margin: 0;
 }
