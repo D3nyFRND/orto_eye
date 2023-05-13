@@ -29,3 +29,5 @@
     <button>Zobacz pełną ofertę</button>
   </section>
 </template>
+
+<style lang="scss" src="./offer.scss" scoped></style>
