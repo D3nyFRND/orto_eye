@@ -1,0 +1,71 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-size: var(--heroHeader-text_size);
+    }
+
+    h2{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+        margin: 1rem;
+        text-align: center;
+    }
+}
+
+.referenceWrapper{
+    display: block;
+    max-width: 1000px;
+    margin: 4rem auto;
+
+    *{
+        margin: 1rem;
+        text-align: center;
+    }
+}
+
+.carousel{
+
+    .carousel-indicators{
+        bottom: -4rem;
+        button{
+            background-color: var(--common-text_color);
+            border-radius: 100%;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+    
+    .carousel-inner{
+
+    .carousel-item{
+        min-height: 400px;
+
+        .reference{
+            max-width: 600px;
+            min-height: 400px;
+            background-color: var(--side-color);
+            background-image: url("../../assets/references/card.webp");
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: auto;
+            border-radius: 2rem;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-around; 
+            align-items: center;
+
+            .bi-star-fill{
+                fill: var(--grey);
+            }
+        }
+    }
+}
+}
