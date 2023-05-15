@@ -7,6 +7,7 @@
 .work{
     display: flex;
     justify-content: center; 
+    flex-direction: row;
     align-items: center;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #ffffff 22%, #f9f7f6 71%, rgba(239, 232, 229, 0) 100%);
 
@@ -99,7 +100,7 @@
     }
 
 
-@media only screen and (min-width:800px) {
+@media only screen and (max-width:800px) {
     .work{
         display: flex;
         justify-content: center; 
