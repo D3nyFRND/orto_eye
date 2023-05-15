@@ -31,3 +31,12 @@ section{
 #app{
   margin: 0;
 }
+
+@media only screen and (max-width:1400px) {
+  h2{
+    font-size: 1.5rem;
+  }
+  p{
+    font-size: 0.8rem;
+  }
+}

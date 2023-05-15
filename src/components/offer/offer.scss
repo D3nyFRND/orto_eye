@@ -45,3 +45,24 @@
         }
     }
 }
+
+@media only screen and (max-width:1300px){
+    .offerWrapper{
+        flex-direction: column;
+        padding: 1rem 0; 
+
+        .offerContainer{
+            &:nth-child(2){
+                bottom: 0 !important;
+            }
+
+            p{
+                font-size: 1rem !important;
+                margin: 1rem 0 !important;
+            }
+            img{
+                height: 4rem;
+            }
+        }
+    }
+}
