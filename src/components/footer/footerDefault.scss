@@ -11,6 +11,10 @@ footer{
         flex-wrap: wrap; 
         justify-content: space-between;
 
+            img{
+                max-width: 90vw;
+            }
+
             nav{
                 display: flex;
                 flex-wrap: wrap;
@@ -80,5 +84,24 @@ footer{
         flex-wrap: wrap; 
         align-items: center;
         color: var(--grey);
+    }
+}
+
+
+@media only screen and (max-width:600px)  {
+    footer{
+        .logoNav{
+            flex-flow: column wrap; 
+            place-content: center flex-start; 
+            align-items: center;
+
+            nav{
+                margin-top: 1rem;
+                display: flex;
+                flex-wrap: wrap; 
+                place-content: center; 
+                align-items: center;
+            }
+        }
     }
 }
