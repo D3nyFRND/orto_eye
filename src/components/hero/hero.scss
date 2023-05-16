@@ -4,6 +4,50 @@
     background-repeat: no-repeat;
 }
 
+
+.playButton{
+        
+        display: none;
+
+        iframe{
+            display: none;
+        }
+    }
+
+.knowMore{
+    display: none;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bcg);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+    .knowMore_inside{
+        background-color: var(--side-color);
+        padding: 1rem;
+        border-radius: 1rem;
+
+    }
+    &.playButton{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+
+        iframe{
+            display: block;
+        }
+    }
+
+}
+
 .bi{
     height: var(--h2-text_size);
 }
@@ -12,6 +56,7 @@ section{
     display: flex;
     min-height: 100svh;
     text-align: left;
+    flex-wrap: wrap;
     .left{
         flex: 5;
         display: flex;
@@ -154,6 +199,81 @@ section{
                     }
                 }
             }
+
+            p{
+                font-size: var(--common-text_size);
+                font-weight: bold;
+            }
         }
+    }
+}
+
+@media only screen and (max-width:1400px) {
+    section{
+        flex-direction: column;
+        @include bcg-img(cover, url("../../assets/hero/eye-g11ca97afe_1280.jpg"));
+        background-position: center;
+        background-attachment: fixed;
+        margin: auto;
+        
+        .left{
+            align-items: center;
+            margin: 1rem;
+            text-align: center;
+            
+            h1{
+                font-size: 3rem !important;
+                width: 100% !important;
+            }
+            h2{
+                font-size: 1.8rem !important;
+            }
+
+            button{
+                font-size: 1rem !important;
+                margin: auto;
+            }
+
+            h2,h1{
+                text-shadow: 2px 2px var(--side-color);
+            }
+        }
+
+        .right{
+            background: none;
+
+            p{
+                font-size: 1rem !important;
+            }
+
+            .empty{
+                display: none;
+            }
+
+            .boxes{
+                align-content: center;
+                margin: 1rem;      
+                
+                .boxesTop{
+                    .boxLeft{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px) {
+    section .right .boxes p{
+        font-size: 0.8rem !important;
+    }
+    
+    section .right .boxes .boxesBottom .boxLeft span::before{
+        display: none;
+    }
+    section .right .boxes .boxesBottom .boxLeft span{
+        top: 100%;
+        left: 5%;
     }
 }

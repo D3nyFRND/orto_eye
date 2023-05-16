@@ -1,0 +1,107 @@
+li{
+    list-style: none;
+}
+
+footer{
+    background-color: var(--side-color);
+    padding: 2rem 1rem;
+
+    .logoNav{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+
+            img{
+                max-width: 90vw;
+            }
+
+            nav{
+                display: flex;
+                flex-wrap: wrap;
+
+                    li{
+                        list-style: none;
+                        margin: auto 0.5rem;
+
+                            a{
+                                color: var(--common-text_color);
+                                font-size: var(--common-text_size);
+                                font-weight: bold;
+                                text-decoration: none;
+                                transition: 0.4s;
+                                padding: 0.3rem;
+                                border-radius: 1rem;
+
+                                &:hover, &:active{
+                                    color: var(--bcg-color);
+                                    background-color: var(--common-text_color);
+                                }
+                            }
+                    }
+            }
+    }
+
+    p{
+        margin: 2rem 0.5rem;
+        max-width: 450px;
+        font-size: var(--common-text_size);
+        font-weight: lighter;
+    }
+
+    ul{
+        display: flex;
+        padding: 0;
+            li{
+                margin: 1rem;
+
+                a{
+                    color: var(--grey);
+                    transition: 0.2s;
+
+                    &.facebook:hover{
+                        color: #1877f2;
+                    }
+                    &.instagram:hover{
+                        color: #F77737;
+                    }
+                    &.twitter:hover{
+                        color: #1DA1F2;
+                    }
+                    &.youtube:hover{
+                        color: #FF0000;
+                    }
+
+                        svg{
+                            height: 1.5rem;
+                        }
+                }
+            }
+    }
+
+    .bottom{
+        display: flex;
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+        align-items: center;
+        color: var(--grey);
+    }
+}
+
+
+@media only screen and (max-width:600px)  {
+    footer{
+        .logoNav{
+            flex-flow: column wrap; 
+            place-content: center flex-start; 
+            align-items: center;
+
+            nav{
+                margin-top: 1rem;
+                display: flex;
+                flex-wrap: wrap; 
+                place-content: center; 
+                align-items: center;
+            }
+        }
+    }
+}

@@ -69,6 +69,11 @@ export default {
   methods: {
     menu() {
       this.active = !this.active;
+      if (this.active == true) {
+        document.querySelector("body").style.overflow = "hidden";
+      } else {
+        document.querySelector("body").style.overflow = "scroll";
+      }
     },
   },
 };

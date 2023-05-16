@@ -1,14 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Work+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&family=Work+Sans&display=swap');
 :root {
   --bcg-color: #efe8e5;
   --side-color: #fff;
+  --common-text_color: #1e284a;
+  --modal-bcg: hsla(226, 42%, 20%, 0.8);
+  --grey: #ecb8c6;
+
   --common-text_font: ` "Poppins", sans-serif`;
   --button-text_font: ` "Work Sans", sans-serif`;
-  --common-text_color: #1e284a;
+  --card-text_font: 'Playfair Display', serif;
+
   --common-text_size: 1rem;
   --header-text_size: 1.5rem;
   --heroHeader-text_size: 4rem;
   --h2-text_size: 2rem;
+
 }
 #app {
   font-family: var(--common-text_font);
@@ -18,4 +24,36 @@
 body {
   background-color: var(--bcg-color);
   margin: 0;
+}
+
+section{
+  min-height: 100svh;
+  margin-bottom: 10vh;
+}
+
+#app{
+  margin: 0;
+}
+
+@media only screen and (max-width:1400px) {
+  h2{
+    font-size: 1.5rem;
+  }
+  p{
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .box{
+    width: 150px !important;
+    height: 150px !important;
+
+    .bi{
+      height: 1.2rem !important;
+    }
+    p{
+      font-size: 0.8rem !important;
+    }
+  }
 }

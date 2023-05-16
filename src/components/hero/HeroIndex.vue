@@ -1,12 +1,45 @@
 <template>
   <section>
+    <div
+      v-if="modalToogle_value_knowMore"
+      class="knowMore"
+      :class="{ modal: modalToogle_value_knowMore == true }"
+      v-on:click.self="modalToogle_knowMore"
+    >
+      <div class="knowMore_inside">
+        <h1>Lorem, ipsum.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+          aperiam.
+        </p>
+      </div>
+    </div>
+    <div
+      v-if="modalToogle_value_playButton"
+      class="playButton"
+      :class="{ modal: modalToogle_value_playButton == true }"
+      v-on:click.self="modalToogle_playButton"
+    >
+      <div class="playButton_inside">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
     <div class="left">
       <div>
         <div class="leftText">
           <h2>Specjalistyczny</h2>
           <h1>Gabinet Ortoptyczny w Olsztynie</h1>
         </div>
-        <button>
+        <button v-on:click="modalToogle_knowMore">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="bi-caret-right-fill"
@@ -38,13 +71,13 @@
                 d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
               />
             </svg>
-            <p>Profesjonalne badania i terapia wzroku</p>
+            <p class="paragraph">Profesjonalne badania i terapia wzroku</p>
           </div>
         </div>
         <div class="boxesBottom">
           <div class="boxLeft box">
             <div>
-              <span>
+              <span v-on:click="modalToogle_playButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="bi bi-play-fill"
@@ -70,7 +103,7 @@
                 d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
               />
             </svg>
-            <p>Spokój i brak pośpiechu podczas badania</p>
+            <p class="paragraph">Spokój i brak pośpiechu podczas badania</p>
           </div>
         </div>
       </div>
@@ -78,7 +111,32 @@
   </section>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      modalToogle_value_knowMore: false,
+      modalToogle_value_playButton: false,
+    };
+  },
+  methods: {
+    modalToogle_knowMore() {
+      this.modalToogle_value_knowMore = !this.modalToogle_value_knowMore;
+      if (this.modalToogle_value_knowMore == true) {
+        document.querySelector("body").style.overflow = "hidden";
+      } else {
+        document.querySelector("body").style.overflow = "scroll";
+      }
+    },
+    modalToogle_playButton() {
+      this.modalToogle_value_playButton = !this.modalToogle_value_playButton;
+      if (this.modalToogle_value_playButton == true) {
+        document.querySelector("body").style.overflow = "hidden";
+      } else {
+        document.querySelector("body").style.overflow = "scroll";
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss" src="./hero.scss" scoped></style>
