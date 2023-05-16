@@ -263,3 +263,17 @@ section{
         }
     }
 }
+
+@media only screen and (max-width:500px) {
+    section .right .boxes p{
+        font-size: 0.8rem !important;
+    }
+    
+    section .right .boxes .boxesBottom .boxLeft span::before{
+        display: none;
+    }
+    section .right .boxes .boxesBottom .boxLeft span{
+        top: 100%;
+        left: 5%;
+    }
+}

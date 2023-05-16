@@ -32,7 +32,7 @@ footer{
                                 padding: 0.3rem;
                                 border-radius: 1rem;
 
-                                &:hover{
+                                &:hover, &:active{
                                     color: var(--bcg-color);
                                     background-color: var(--common-text_color);
                                 }

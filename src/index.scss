@@ -43,3 +43,17 @@ section{
     font-size: 0.8rem;
   }
 }
+
+@media only screen and (max-width:500px) {
+  .box{
+    width: 150px !important;
+    height: 150px !important;
+
+    .bi{
+      height: 1.2rem !important;
+    }
+    p{
+      font-size: 0.8rem !important;
+    }
+  }
+}
